@@ -1,0 +1,84 @@
+.navbar-list{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  background-color: black;
+  color: white;
+  
+ 
+}
+.link{
+  color: white;
+  text-decoration: none;
+}
+.link:hover{
+  background-color: grey;
+}
+.item{
+  padding: 10px;
+}
+.item:hover{
+  background-color: grey;
+}
+.header{
+  background-color: skyblue;
+  
+}
+.searchForm input{
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  
+}
+.searchForm label{
+  position: absolute;
+  left: -9999999px;
+}
+.postLink:visited{
+  text-decoration: none;
+}
+.postLink:hover{
+  color: lightgreen;
+}
+
+.postLink{
+  gap:10px;
+  line-gap-override: lightgrey;
+}
+.naviSystem{
+  background-color:green;
+}
+
+.newPostForm input{
+  width:80%;
+  height: 20px;
+  position: absolute;
+  left: 10%;
+  border-radius: 5px;
+  
+}
+.newPostForm label{
+  
+}
+.newPostForm #body-text{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 80%;
+  height: 50%;
+  font-family: sans-serif;
+  border-radius: 5px;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}
+
+
+
+
+
+
