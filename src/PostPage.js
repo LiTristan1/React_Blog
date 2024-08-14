@@ -8,12 +8,9 @@ const PostPage = () => {
   
   const deletePost = useStoreActions((action)=> action.deletePost);
   const getPostById = useStoreState((state) => state.getPostById);
-  const editTitle = useStoreState((state) => state.editTitle);
+  
   const posts = useStoreState((state) => state.posts);
-  const editBody = useStoreState((state) => state.editBody);
-  const setEditTitle = useStoreActions((action) => action.setEditTitle);
-  const setPosts = useStoreActions((action) => action.setPosts);
-  const setEditBody= useStoreActions((action) => action.setEditBody);
+
   
   
   const{id} = useParams();

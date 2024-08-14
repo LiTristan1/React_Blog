@@ -8,7 +8,7 @@ import PostPage from './PostPage';
 import NewPost from './NewPost';
 import Missing from './Missing';
 import Layout from './Layout';
-import {BrowserRouter, Routes, Route,useNavigate} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import {useEffect} from 'react';
 import useAxiosFetch from './hooks/useAxiosFetch';
 

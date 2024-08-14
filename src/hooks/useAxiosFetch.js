@@ -9,7 +9,7 @@ const useAxiosFetch = (dataurl) => {
     useEffect(() => {
         console.log("Inside use axios custom hook");
         let isMounted = true;
-        const source = axios.CancelToken.source();
+       
         const controller = new AbortController();
         const fetchData = async(url) => {
             setIsLoading(true);
