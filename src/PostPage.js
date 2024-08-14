@@ -1,9 +1,6 @@
 import React from 'react'
 import {useParams,Link} from 'react-router-dom';
-/*
-import {useContext} from 'react';
-import DataContext from './context/DataContext';
-*/
+
 import {useStoreState,useStoreActions} from 'easy-peasy';
 import {useNavigate} from 'react-router-dom';
 import api from './api/posts';
@@ -18,8 +15,13 @@ const PostPage = () => {
   const setPosts = useStoreActions((action) => action.setPosts);
   const setEditBody= useStoreActions((action) => action.setEditBody);
   
+  
   const{id} = useParams();
+  if(!id){
+    id = 1;
+  }
   const post = getPostById(id);
+
   const navigate  = useNavigate();
 
   function handleDelete() {

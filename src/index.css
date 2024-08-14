@@ -7,6 +7,10 @@
   
  
 }
+#postPageActive{
+  background-color: grey;
+  text-decoration: none;
+}
 .link{
   color: white;
   text-decoration: none;
@@ -49,17 +53,27 @@
   background-color:green;
 }
 
-.newPostForm input{
+.newPostForm{
+  width: 80%;
+}
+.newPostForm input[type = 'text']{
   width:80%;
   height: 20px;
   position: absolute;
   left: 10%;
   border-radius: 5px;
+  margin-bottom: 20px;
   
 }
-.newPostForm label{
-  
+.newPostForm textarea{
+  margin-top: 5%;
 }
+.newPostForm button{
+  position: absolute;
+  top: 700px;
+  left: 48%;
+}
+
 .newPostForm #body-text{
   position: absolute;
   top: 40%;

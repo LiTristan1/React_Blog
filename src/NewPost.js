@@ -24,7 +24,7 @@ const NewPost = () => {
     //ensure new id is not a duplicate and is the next positive integer
     const id = posts.length? posts[posts.length-1].id + 1: 1;
     //const datetime = format(new Date, 'MMMM dd, yyyy pp');
-    const datetime = 1;
+    const datetime = new Date();
     //Create the new post
     const newPost = {id, title: postTitle, datetime, body: postBody};
     savePost(newPost);

@@ -13,7 +13,7 @@ const Layout = () => {
                     <Link className = 'link' to = '/post'>New Post</Link>
                 </li>
                 <li className = 'item'>
-                    <Link className = 'link' to ='/post/:id'>Post Page</Link>
+                    <Link id = 'postPage' className = 'link' to ='/post/:id'>Post Page</Link>
                 </li>
             </ul>
         </nav>

@@ -3,7 +3,7 @@ import Nav from './Nav';
 import Footer from './Footer';
 
 import Home from './Home';
-import About from './About';
+
 import PostPage from './PostPage';
 import NewPost from './NewPost';
 import Missing from './Missing';
@@ -22,6 +22,7 @@ function App() {
   //Retrieve data from json-server
   const{data,fetchError,isLoading} = useAxiosFetch('http://localhost:3500/posts');
   useEffect(() => {
+    console.log(data)
     setPosts(data);
   },[data,setPosts])
   

@@ -4,7 +4,7 @@ import {useStoreState,useStoreActions} from 'easy-peasy';
 import './index.css';
 const Nav = () => {
   const posts = useStoreState((state) => state.posts);
-  const search = useStoreState((state) => state.posts);
+  const search = useStoreState((state) => state.search);
   const setSearch = useStoreActions((action) => action.setSearch);
   const setSearchResults = useStoreActions((action) => action.setSearchResults);
 
