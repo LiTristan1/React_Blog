@@ -1,11 +1,7 @@
 import React from 'react'
 import './index.css';
-/*
-import {useContext} from 'react';
-import DataContext from './context/DataContext';
-*/
 import {useNavigate} from 'react-router-dom';
-import api from './api/posts';
+
 import {useStoreState,useStoreActions} from 'easy-peasy';
 const NewPost = () => {
   //const{posts,setPosts,postTitle,setPostTitle,postBody,setPostBody} = useContext(DataContext);
@@ -13,7 +9,6 @@ const NewPost = () => {
   const posts = useStoreState((state)=>state.posts);
   const postBody = useStoreState((state)=>state.postBody);
   const postTitle = useStoreState((state)=>state.postTitle);
-  const setPosts = useStoreActions((action)=>action.setPosts);
   const setPostTitle = useStoreActions((action)=>action.setPostTitle);
   const setPostBody = useStoreActions((action) => action.setPostBody);
   const savePost = useStoreActions((action) => action.savePost);
@@ -29,7 +24,7 @@ const NewPost = () => {
     const newPost = {id, title: postTitle, datetime, body: postBody};
     savePost(newPost);
     navigate('/');
-    //CRUD operations
+    //Crud Operation (Submit)
     
   }
 
