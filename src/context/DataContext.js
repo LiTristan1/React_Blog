@@ -1,7 +1,5 @@
 import {createContext, useState, useEffect} from 'react';
-import {BrowserRouter, Routes, Route,useNavigate} from 'react-router-dom';
-import format from 'date-fns';
-import api from  '../api/posts';
+
 import useWindowSize from '../hooks/useWindowSize';
 import useAxiosFetch from '../hooks/useAxiosFetch';
 const DataContext = createContext({});
@@ -13,7 +11,7 @@ export const DataProvider = ({children}) => {
   const[editTitle,setEditTitle] = useState('');
   const[editBody,setEditBody] = useState('');
   const[searchResults, setSearchResults] = useState([]);
-  const navigate = useNavigate();
+  
   const {width} = useWindowSize();
   const{data,fetchError,isLoading} = useAxiosFetch('http://localhost:3500/posts');
   const [postTitle,setPostTitle] = useState("");

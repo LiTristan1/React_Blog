@@ -3,7 +3,7 @@ import {useParams,Link} from 'react-router-dom';
 
 import {useStoreState,useStoreActions} from 'easy-peasy';
 import {useNavigate} from 'react-router-dom';
-import api from './api/posts';
+
 const PostPage = () => {
   
   const deletePost = useStoreActions((action)=> action.deletePost);
@@ -14,9 +14,7 @@ const PostPage = () => {
   
   
   const{id} = useParams();
-  if(!id){
-    id = 1;
-  }
+  
   const post = getPostById(id);
 
   const navigate  = useNavigate();
