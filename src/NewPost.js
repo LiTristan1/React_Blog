@@ -5,7 +5,6 @@ import {useNavigate} from 'react-router-dom';
 import {useStoreState,useStoreActions} from 'easy-peasy';
 const NewPost = () => {
   //const{posts,setPosts,postTitle,setPostTitle,postBody,setPostBody} = useContext(DataContext);
-  {/**Get required states from store */}
   const posts = useStoreState((state)=>state.posts);
   const postBody = useStoreState((state)=>state.postBody);
   const postTitle = useStoreState((state)=>state.postTitle);
