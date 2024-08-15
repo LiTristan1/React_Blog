@@ -11,7 +11,7 @@ const NewPost = () => {
   const setPostTitle = useStoreActions((action)=>action.setPostTitle);
   const setPostBody = useStoreActions((action) => action.setPostBody);
   const savePost = useStoreActions((action) => action.savePost);
-
+  const setPosts = useStoreActions((action) => action.setPosts);
   const navigate = useNavigate();
   async function handleSubmit(e){
     e.preventDefault();
@@ -21,6 +21,7 @@ const NewPost = () => {
     const datetime = new Date();
     //Create the new post
     const newPost = {id, title: postTitle, datetime, body: postBody};
+    setPosts([...posts,newPost]);
     savePost(newPost);
     navigate('/');
     //Crud Operation (Submit)
