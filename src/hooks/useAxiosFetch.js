@@ -2,11 +2,12 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 
 const useAxiosFetch = ({dataurl}) => {
-    const [data,setData] = useState([]);
+    
     const [fetchError, setFetchError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        const [data,setData] = useState([]);
         console.log("Inside use axios custom hook");
         let isMounted = true;
        
